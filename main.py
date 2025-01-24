@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # type: ignore
 
 db = pd.read_csv('FINA2012.csv', sep=';')
 
