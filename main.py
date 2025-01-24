@@ -11,6 +11,7 @@ else:
     filtered_rows = db[db[kolonne].str.contains(search_string)]
 
 
+
 #print(filtered_rows)
 
 df = pd.DataFrame(filtered_rows)
