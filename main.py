@@ -1,9 +1,22 @@
 import pandas as pd # type: ignore
+import argparse
 
-db = pd.read_csv('FINA2012.csv', sep=';')
 
-search_string = "2001" 
-kolonne = "Født"
+parser = argparse.ArgumentParser(description="sample argument parser")
+parser.add_argument("-f", type=str, help="Link til fil")
+parser.add_argument("-s", type=str, help="Søgestreng")
+parser.add_argument("-k", type=str, help="Kolonne")
+args = parser.parse_args()
+
+db = pd.read_csv(args.f, sep=';')
+search_string = args.s
+kolonne = args.k
+
+
+# db = pd.read_csv('FINA2012.csv', sep=';')
+
+# search_string = "1990" 
+# kolonne = "Født"
 if search_string.isnumeric():
     numeric_value = int(search_string)
     filtered_rows = db[db[kolonne] == numeric_value]
