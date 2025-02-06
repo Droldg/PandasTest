@@ -2,7 +2,7 @@ import pandas as pd # type: ignore
 import argparse
 
 
-parser = argparse.ArgumentParser(description="sample argument parser")
+parser = argparse.ArgumentParser(description="Sorter og eksporter data fra en csv fil")
 parser.add_argument("-f", type=str, help="Link til fil")
 parser.add_argument("-s", type=str, help="Søgestreng")
 parser.add_argument("-k", type=str, help="Kolonne")
